@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-events-list',
   template: `
-      <div>
-          <h1>Upcoming Angular Events</h1>
-          <hr>
-          <app-event-thumbnail [event]="event1"></app-event-thumbnail>
-      </div>
+    <div>
+      <h1>Upcoming Angular Events</h1>
+      <hr>
+      <app-event-thumbnail #thumbnail [event]="event1"></app-event-thumbnail>
+      <button (click)="thumbnail.logFoo()" class="btn btn-primary">Log me some foo</button>
+    </div>
   `
 })
 export class EventsListComponent {

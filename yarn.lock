@@ -5051,7 +5051,7 @@
     "merge-stream" "^2.0.0"
     "supports-color" "^7.0.0"
 
-"jquery@^2.2.4":
+"jquery@^2.2.4", "jquery@>=1.12.0":
   "integrity" "sha512-lBHj60ezci2u1v2FqnZIraShGgEXq35qCzMv4lITyHGppTnA13rwR0MgwyNJh9TnDs3aXUvd1xjAotfraMHX/Q=="
   "resolved" "https://registry.npmjs.org/jquery/-/jquery-2.2.4.tgz"
   "version" "2.2.4"
@@ -8632,6 +8632,13 @@
     "extend-shallow" "^3.0.2"
     "regex-not" "^1.0.2"
     "safe-regex" "^1.1.0"
+
+"toastr@^2.1.4":
+  "integrity" "sha512-LIy77F5n+sz4tefMmFOntcJ6HL0Fv3k1TDnNmFZ0bU/GcvIIfy6eG2v7zQmMiYgaalAiUv75ttFrPn5s0gyqlA=="
+  "resolved" "https://registry.npmjs.org/toastr/-/toastr-2.1.4.tgz"
+  "version" "2.1.4"
+  dependencies:
+    "jquery" ">=1.12.0"
 
 "toidentifier@1.0.0":
   "integrity" "sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw=="

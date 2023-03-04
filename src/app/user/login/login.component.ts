@@ -4,9 +4,17 @@ import {Router} from '@angular/router';
 import {addWarning} from '@angular-devkit/build-angular/src/utils/webpack-diagnostics';
 
 @Component({
-  templateUrl: './login.component.html'
+  templateUrl: './login.component.html',
+  styles: [`
+    em {
+      float: right;
+      color: #e05c65;
+      padding-left: 10px;
+    }
+  `]
 })
 export class LoginComponent {
+  mouseoverLogin = false;
   userName: string;
   password: string;
 

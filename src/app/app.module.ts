@@ -16,6 +16,7 @@ import {
   EventDetailsComponent
 } from './events';
 import {Error404Component} from './errors/404.component';
+import {AuthService} from './user/auth.service';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {Error404Component} from './errors/404.component';
       provide: 'canDeactivateCreateEvent',
       useValue: canDeactivateCreateEvent
     },
-    EventsListResolverService
+    EventsListResolverService,
+    AuthService
   ],
   bootstrap: [EventsAppComponent]
 })

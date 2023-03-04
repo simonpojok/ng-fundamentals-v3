@@ -2,9 +2,10 @@ import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
 import {EventService} from './shared/event.service';
 import {map} from 'rxjs/operators';
+import {IEventModel} from './shared';
 
 @Injectable()
-export class EventsListResolverService implements Resolve<any[]> {
+export class EventsListResolverService implements Resolve<IEventModel[]> {
   constructor(private eventsService: EventService) {
   }
 

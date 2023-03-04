@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
-import {Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import {IEventModel} from './event.model';
 
 @Injectable()
 export class EventService {
-  getEvents(): Subject<IEventModel[]> {
+  getEvents(): Observable<IEventModel[]> {
     const subject = new Subject<IEventModel[]>();
     setTimeout(() => {
       subject.next(EVENTS);

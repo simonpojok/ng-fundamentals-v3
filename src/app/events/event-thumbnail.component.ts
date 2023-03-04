@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {IEventModel} from './shared';
 
 @Component({
   selector: 'app-event-thumbnail',
@@ -26,7 +27,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
     `
   ],
   template: `
-    <div [routerLink]="['/events', event.id]"  class="well hoverwell thumbnail">
+    <div [routerLink]="['/events', event.id]" class="well hoverwell thumbnail">
       <h2>{{event?.name}}</h2>
       <div>Date: {{event?.date}}</div>
       <div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time">
@@ -45,7 +46,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   `,
 })
 export class EventThumbnailComponent {
-  @Input() event: any;
+  @Input() event: IEventModel;
 
 
   getStartTimeClass() {

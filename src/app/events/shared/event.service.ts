@@ -4,6 +4,7 @@ import {IEventModel} from './event.model';
 
 @Injectable()
 export class EventService {
+
   getEvents(): Observable<IEventModel[]> {
     const subject = new Subject<IEventModel[]>();
     setTimeout(() => {
@@ -15,6 +16,11 @@ export class EventService {
 
   getEvent(id: number): IEventModel {
     return EVENTS.find(event => event.id === id);
+  }
+
+  save(event: IEventModel) {
+    event.id = EVENTS.length;
+    EVENTS.push(event);
   }
 }
 

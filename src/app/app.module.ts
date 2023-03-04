@@ -17,13 +17,15 @@ import {
 } from './events';
 import {Error404Component} from './errors/404.component';
 import {AuthService} from './user/auth.service';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(appRoutes)
-  ],
+    imports: [
+        BrowserModule,
+        RouterModule.forRoot(appRoutes),
+        FormsModule
+    ],
   declarations: [
     EventsAppComponent,
     EventsListComponent,
